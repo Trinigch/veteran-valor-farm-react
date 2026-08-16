@@ -36,7 +36,7 @@ const Footer = () => {
               </NavLink>
 
               <a
-                href="https://veteranvalorfarm.org/checkout/donate?donatePageId=6589f6eabf81a44243793d2f"
+                href="https://givemn.org/organization/veteran-valor-farm"
                 className="footer-button"
               >
                 Donate
