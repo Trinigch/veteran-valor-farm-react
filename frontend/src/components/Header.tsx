@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Navigations from "./Navigations";
-import logo from "../assets/Imagenes/logo.png";
+import logo from "../assets/Imagenes/Logo.png";
 import "./Header.css";
 
 interface HeaderProps {
