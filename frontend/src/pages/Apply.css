@@ -1,0 +1,219 @@
+/* =========================
+   APPLY PAGE
+========================= */
+
+.apply-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #9fadb6;
+
+  box-sizing: border-box;
+
+  padding-top: 120px;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.apply-header {
+  width: 100%;
+
+  padding: 45px 50px 50px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.apply-header h1 {
+  margin: 0;
+
+  width: 100%;
+
+  color: white;
+
+  font-size: clamp(2.5rem, 5vw, 5rem);
+
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================
+   CONTENT SECTION
+========================= */
+
+.apply-section {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0 40px 80px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  /*
+    50% izquierda
+    50% derecha
+  */
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.apply-content {
+  width: 100%;
+
+  padding: 50px 60px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.apply-content p {
+  width: 100%;
+
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: 1.2rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   APPLY BUTTON
+========================= */
+
+.apply-button {
+  display: inline-block;
+
+  align-self: flex-start;
+
+  margin: 5px 0 30px;
+
+  padding: 15px 35px;
+
+  background: #448539;
+
+  color: white;
+
+  border: 2px solid #36622f;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.apply-button:hover {
+  background: white;
+
+  color: #284623;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+/* =========================
+   IMAGE
+========================= */
+
+.apply-image {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.apply-image img {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .apply-page {
+    padding-top: 100px;
+  }
+
+  .apply-header {
+    padding: 35px 20px 35px;
+  }
+
+  .apply-header h1 {
+    font-size: 2.7rem;
+  }
+
+  .apply-section {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 0 20px 50px;
+  }
+
+  .apply-content {
+    padding: 35px 25px;
+  }
+
+  .apply-image {
+    min-height: 400px;
+  }
+
+  .apply-button {
+    align-self: center;
+  }
+}

@@ -1,0 +1,279 @@
+.home {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  width: 100%;
+  min-height: 100vh;
+
+  margin: 0;
+  padding: 0;
+
+  background-image: url("../assets/Imagenes/Sunrise.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* =========================
+   GREEN OVERLAY
+========================= */
+
+.hero-overlay {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /*
+    Transparent Veteran Valor Farm green
+    Increase/decrease the last value
+    to adjust the intensity.
+  */
+  background-color: rgba(255, 255, 255, 0.124);
+
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /*
+    Space reserved for the Header / Navigation
+  */
+  padding-top: 120px;
+  padding-bottom: 40px;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1000px;
+
+  padding: 40px 30px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+
+  /*
+    Keeps title, paragraph and buttons
+    vertically stacked.
+  */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.hero-content h1 {
+  display: block;
+
+  width: fit-content;
+  max-width: 100%;
+
+  margin: 0 0 25px;
+
+  padding: 18px 30px;
+
+  /*
+    Transparent white background
+  */
+  background: rgba(255, 255, 255, 0.55);
+
+  /*
+    Black title text
+  */
+  color: #111;
+
+  font-size: clamp(2rem, 6vw, 5rem);
+
+  line-height: 1.05;
+
+  border-radius: 6px;
+
+  text-shadow: none;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   PARAGRAPH
+========================= */
+
+.hero-content p {
+  display: block;
+
+  width: 100%;
+  max-width: 750px;
+
+  margin: 0 auto 35px;
+
+  padding: 24px 30px;
+
+  box-sizing: border-box;
+
+  /*
+    Transparent black background
+  */
+  background: rgba(0, 0, 0, 0.55);
+
+  /*
+    White paragraph text
+  */
+  color: #fff;
+
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+
+  line-height: 1.6;
+
+  border-radius: 6px;
+
+  text-shadow: none;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 16px;
+
+  flex-wrap: wrap;
+}
+
+.hero-button {
+  display: inline-block;
+
+  padding: 14px 34px;
+
+  border-radius: 4px;
+
+  text-decoration: none;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* Primary button */
+
+.hero-button.primary {
+  background: white;
+
+  color: #333;
+}
+
+/* Secondary button */
+
+.hero-button.secondary {
+  border: 2px solid white;
+
+  color: white;
+
+  background: transparent;
+}
+
+/* Button hover */
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .hero {
+    min-height: 100vh;
+  }
+
+  .hero-overlay {
+    /*
+      More space for the Header / Navigation
+      on smaller screens.
+    */
+    padding-top: 160px;
+    padding-bottom: 30px;
+  }
+
+  .hero-content {
+    padding: 30px 20px;
+  }
+
+  /* Mobile title */
+
+  .hero-content h1 {
+    width: 100%;
+
+    font-size: 3rem;
+
+    padding: 15px 20px;
+  }
+
+  /* Mobile paragraph */
+
+  .hero-content p {
+    width: 100%;
+
+    padding: 20px;
+
+    font-size: 1rem;
+  }
+
+  /* Stack buttons vertically */
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .hero-button {
+    width: 100%;
+
+    max-width: 250px;
+
+    text-align: center;
+  }
+}

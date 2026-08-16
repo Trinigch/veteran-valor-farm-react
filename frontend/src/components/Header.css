@@ -1,0 +1,124 @@
+.site-header {
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  z-index: 1000;
+
+  box-sizing: border-box;
+}
+
+.header-container {
+  width: 100%;
+
+  margin: 0;
+  padding: 15px 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+}
+
+/* =================================
+   HEADER DEL HOME
+================================= */
+
+.site-header-home {
+  position: absolute;
+
+  background: transparent;
+
+  color: white;
+
+  border-bottom: none;
+}
+
+.site-header-home .site-logo {
+  color: white;
+}
+
+.site-header-home .main-nav a {
+  color: white;
+}
+
+
+/* =================================
+   HEADER DE LAS OTRAS PÁGINAS
+================================= */
+
+.site-header-page {
+  position: relative;
+
+  background: #4f6f3a;
+
+  color: white;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.site-header-page .site-logo {
+  color: white;
+}
+
+.site-header-page .main-nav a {
+  color: white;
+}
+
+
+/* =================================
+   LOGO
+================================= */
+
+.site-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+.logo-text {
+  font-size: 1.2rem;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 700px) {
+
+  .header-container {
+    padding: 12px 20px;
+  }
+
+  .logo-image {
+    width: 50px;
+    height: 50px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+}
