@@ -1,0 +1,296 @@
+/* =========================
+   DONATE / GIVEMN PAGE
+========================= */
+
+.donate-page {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #4c6576;
+
+  box-sizing: border-box;
+
+  padding-top: 120px;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.donate-header {
+  width: 100%;
+
+  padding: 40px 50px 45px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.donate-header h1 {
+  margin: 0 0 25px;
+
+  color: #111;
+
+  font-size: clamp(3rem, 6vw, 5rem);
+
+  line-height: 1.1;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================
+   TOP DONATE BUTTON
+========================= */
+
+.donate-top-button {
+  display: inline-block;
+
+  padding: 15px 40px;
+
+  background: #284623;
+
+  color: white;
+
+  border: 2px solid #284623;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 1.05rem;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.donate-top-button:hover {
+  background: white;
+
+  color: #284623;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.donate-section {
+  width: 100%;
+
+  margin: 0;
+
+  padding: 0 40px 50px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  align-items: stretch;
+}
+
+
+/* =========================
+   LEFT CONTENT
+========================= */
+
+.donate-content {
+  width: 100%;
+
+  padding: 40px 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   SUBTITLES
+========================= */
+
+.donate-content h2 {
+  margin: 0 0 12px;
+
+  color: #111;
+
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+
+  line-height: 1.25;
+
+  font-weight: 600;
+}
+
+
+/* =========================
+   PARAGRAPHS
+========================= */
+
+.donate-content p {
+  margin: 0 0 35px;
+
+  color: #111;
+
+  font-size: 1.15rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   EMAIL LINKS
+========================= */
+
+.donate-content a {
+  color: #284623;
+
+  font-weight: 700;
+
+  text-decoration: underline;
+}
+
+.donate-content a:hover {
+  opacity: 0.75;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.donate-image {
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+}
+
+.donate-image img {
+  display: block;
+
+  width: auto;
+
+  max-width: 100%;
+
+  max-height: 550px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  border-radius: 8px;
+}
+
+
+/* =========================
+   BOTTOM DONATE BUTTON
+========================= */
+
+.donate-bottom {
+  width: 100%;
+
+  padding: 20px 20px 70px;
+
+  box-sizing: border-box;
+
+  text-align: center;
+}
+
+.donate-bottom-button {
+  display: inline-block;
+
+  padding: 16px 45px;
+
+  background: #284623;
+
+  color: white;
+
+  border: 2px solid #284623;
+
+  border-radius: 5px;
+
+  text-decoration: none;
+
+  font-size: 1.1rem;
+
+  font-weight: 700;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.donate-bottom-button:hover {
+  background: white;
+
+  color: #284623;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .donate-page {
+    padding-top: 100px;
+  }
+
+  .donate-header {
+    padding: 35px 20px;
+  }
+
+  .donate-header h1 {
+    font-size: 3rem;
+  }
+
+  .donate-section {
+    grid-template-columns: 1fr;
+
+    gap: 30px;
+
+    padding: 0 20px 30px;
+  }
+
+  .donate-content {
+    padding: 30px 20px;
+  }
+
+  .donate-image {
+    padding: 0 20px;
+  }
+
+  .donate-image img {
+    max-height: 450px;
+  }
+
+  .donate-bottom {
+    padding-bottom: 50px;
+  }
+}

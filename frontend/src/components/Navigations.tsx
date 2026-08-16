@@ -11,24 +11,26 @@ function Navigations() {
         Apply for Residency
       </NavLink>
 
+      <NavLink to="/give-mn" className="nav-link">
+        GiveMN
+      </NavLink>
+       <NavLink to="/mission" className="nav-link">
+        Mission
+      </NavLink>
       <NavLink to="/meet-us" className="nav-link">
         Meet Us
       </NavLink>
 
-      <NavLink to="/mission" className="nav-link">
-        Mission
-      </NavLink>
+     
 
       <NavLink to="/about" className="nav-link">
         About VVF
       </NavLink>
   
 
-      <NavLink to="/give-mn" className="nav-link">
-        GiveMN
-      </NavLink>
+  
 
-      <NavLink to="/contact-us" className="nav-link">
+      <NavLink to="/ContactUs" className="nav-link">
         Contact Us
       </NavLink>
     </nav>

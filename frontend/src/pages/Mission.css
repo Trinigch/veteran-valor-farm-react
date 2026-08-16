@@ -1,0 +1,232 @@
+.mission-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: white;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.35)
+    ),
+    url("../assets/Imagenes/ourmissio4n.png");
+
+  background-size: cover;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.mission-intro {
+  width: 100%;
+
+  min-height: 55vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.mission-intro-content {
+  width: 100%;
+
+  padding: 180px 30px 80px;
+
+  box-sizing: border-box;
+}
+
+.mission-intro h1 {
+  margin: 0;
+
+  font-size: clamp(4rem, 9vw, 8rem);
+
+  line-height: 1;
+
+  text-transform: uppercase;
+
+  text-shadow:
+    0 3px 15px rgba(0, 0, 0, 0.8),
+    0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+
+/* =========================
+   ROWS
+========================= */
+
+.mission-row {
+  width: 100%;
+
+  min-height: 420px;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 80px 6%;
+
+  box-sizing: border-box;
+}
+
+
+/* LEFT */
+
+.mission-row.left {
+  justify-content: flex-start;
+}
+
+
+/* RIGHT */
+
+.mission-row.right {
+  justify-content: flex-end;
+}
+
+
+/* =========================
+   TEXT CARD
+========================= */
+
+.mission-card {
+  width: 42%;
+
+  max-width: 620px;
+
+  padding: 35px 40px;
+
+  box-sizing: border-box;
+
+  background: rgba(0, 0, 0, 0.38);
+
+  border-radius: 8px;
+
+  backdrop-filter: blur(2px);
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.mission-card h2 {
+  margin: 0 0 25px;
+
+  font-size: clamp(2rem, 4vw, 3.5rem);
+
+  line-height: 1.1;
+
+  text-transform: uppercase;
+}
+
+.mission-card h3 {
+  margin: 0;
+
+  font-size: 1.3rem;
+
+  line-height: 1.5;
+}
+
+.mission-card p {
+  margin: 0 0 20px;
+
+  font-size: 1.05rem;
+
+  line-height: 1.75;
+}
+
+.mission-card p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+  .mission-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  color: white;
+
+  background-color: #4f6f3a;
+
+  background-image:
+    linear-gradient(
+      rgba(0, 0, 0, 0.30),
+      rgba(0, 0, 0, 0.30)
+    ),
+    url("../assets/Imagenes/ourmission4n.png");
+
+  /*
+    La imagen ocupa todo el ancho
+    manteniendo su proporción.
+  */
+  background-size: 100% auto;
+
+  background-position: center top;
+
+  background-repeat: no-repeat;
+
+  /*
+    LA IMAGEN QUEDA FIJA
+    mientras el contenido hace scroll.
+  */
+  background-attachment: fixed;
+}
+
+  .mission-intro {
+    min-height: 50vh;
+  }
+
+  .mission-intro-content {
+    padding: 150px 20px 60px;
+  }
+
+  .mission-intro h1 {
+    font-size: 4rem;
+  }
+
+  .mission-row,
+  .mission-row.left,
+  .mission-row.right {
+    min-height: auto;
+
+    justify-content: center;
+
+    padding: 50px 20px;
+  }
+
+  .mission-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 30px 25px;
+  }
+
+  .mission-card h2 {
+    font-size: 2rem;
+  }
+
+  .mission-card p {
+    font-size: 1rem;
+
+    line-height: 1.65;
+  }
+
+}

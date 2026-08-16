@@ -10,6 +10,9 @@ import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
 import Apply from "./pages/Apply";
+import GiveMN from "./pages/GiveMN";
+import Mission from "./pages/Mission";
+import ContactUs from "./pages/ContactUs";
 
 function Layout() {
   const location = useLocation();
@@ -28,6 +31,14 @@ function Layout() {
         {/* APPLY */}
         <Route path="/apply" element={<Apply />} />
 
+         {/* GIVE MN / DONATE */}
+        <Route path="/give-mn" element={<GiveMN />} />
+
+     {/* mission */}
+        <Route path="/mission" element={<Mission />} />
+     
+     {/* Contact Us */}
+    <Route     path="/ContactUs" element={<ContactUs />}  />
       </Routes>
 
       <Footer />
