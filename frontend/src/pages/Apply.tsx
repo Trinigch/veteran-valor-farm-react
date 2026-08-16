@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+
 import "./Apply.css";
 import helpingVetsImage from "../assets/Imagenes/helpingvets.png";
 
@@ -58,12 +58,13 @@ const Apply = () => {
           </p>
            <p>How to Apply : To apply for our housing program,  follow these steps:</p>
            <p>1. Complete the Application: Please download the application form from our website. </p>
-          <NavLink
-            to="/contact-us"
-            className="apply-button"
-          >
-            DOWNLOAD APPLICATION
-          </NavLink>
+          <a
+              href="/documents/VVF+App+Final.odt"
+              download="VVF-App-Final.odt"
+              className="apply-button"
+            >
+              DOWNLOAD APPLICATION
+            </a>
 
           <p>
             Take your time to fill out each section thoroughly, 

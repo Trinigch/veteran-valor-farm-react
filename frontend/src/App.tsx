@@ -13,6 +13,9 @@ import Apply from "./pages/Apply";
 import GiveMN from "./pages/GiveMN";
 import Mission from "./pages/Mission";
 import ContactUs from "./pages/ContactUs";
+import MeetUs from "./pages/MeetUs";
+import About from "./pages/About";
+
 
 function Layout() {
   const location = useLocation();
@@ -38,7 +41,13 @@ function Layout() {
         <Route path="/mission" element={<Mission />} />
      
      {/* Contact Us */}
-    <Route     path="/ContactUs" element={<ContactUs />}  />
+    <Route  path="/ContactUs" element={<ContactUs />}  />
+
+      {/* About */}
+    <Route  path="/About" element={<About />}  />
+
+       {/* Meet Us */}
+    <Route  path="/MeetUs" element={<MeetUs />}  />
       </Routes>
 
       <Footer />

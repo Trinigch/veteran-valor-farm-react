@@ -14,13 +14,11 @@ const GiveMN = () => {
         <h1>Donate</h1>
 
         <a
-          href="https://www.givemn.org/"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="https://veteranvalorfarm.org/checkout/donate?donatePageId=6589f6eabf81a44243793d2f"
           className="donate-top-button"
-        >
-          Donate
-        </a>
+          >
+          DONATE
+          </a>
 
       </header>
 

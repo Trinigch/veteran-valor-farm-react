@@ -1,3 +1,7 @@
+/* =================================
+   HEADER GENERAL
+================================= */
+
 .site-header {
   width: 100%;
   left: 0;
@@ -21,6 +25,7 @@
   box-sizing: border-box;
 }
 
+
 /* =================================
    HEADER DEL HOME
 ================================= */
@@ -28,11 +33,25 @@
 .site-header-home {
   position: absolute;
 
-  background: transparent;
+  /*
+    Fondo verde oscuro transparente.
+    Permite ver la imagen del Home
+    pero mejora la lectura.
+  */
+
+  background: rgba(35, 60, 30, 0.38);
 
   color: white;
 
-  border-bottom: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+
+  /*
+    Un pequeño desenfoque ayuda a integrar
+    el header con la imagen.
+  */
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
 }
 
 .site-header-home .site-logo {
@@ -73,6 +92,7 @@
 
 .site-logo {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
@@ -98,7 +118,65 @@
 
   white-space: nowrap;
 
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  color: white;
+
+  text-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =================================
+   NAVEGACIÓN
+================================= */
+
+.site-header .main-nav a {
+  position: relative;
+
+  color: white;
+
+  text-decoration: none;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.45);
+
+  transition: color 0.25s ease;
+}
+
+
+/* Línea debajo del enlace */
+
+.site-header .main-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -7px;
+
+  width: 100%;
+  height: 2px;
+
+  background: white;
+
+  transform: scaleX(0);
+
+  transform-origin: center;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* Hover */
+
+.site-header .main-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Página actual */
+
+.site-header .main-nav a.active::after {
+  transform: scaleX(1);
 }
 
 
@@ -119,6 +197,10 @@
 
   .logo-text {
     font-size: 1rem;
+  }
+
+  .site-header-home {
+    background: rgba(35, 60, 30, 0.48);
   }
 
 }

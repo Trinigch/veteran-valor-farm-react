@@ -9,8 +9,11 @@
   position: relative;
 
   background-image: url("../assets/Imagenes/facebook.png");
+
   background-size: cover;
+
   background-position: center;
+
   background-repeat: no-repeat;
 
   color: white;
@@ -27,9 +30,15 @@
   position: relative;
 
   width: 100%;
+
   min-height: 400px;
 
-  background: rgba(40, 70, 35, 0.82);
+  background:
+    linear-gradient(
+      135deg,
+      rgba(55, 105, 45, 0.94),
+      rgba(83, 135, 58, 0.91)
+    );
 
   padding: 60px 30px 25px;
 
@@ -43,6 +52,7 @@
 
 .footer-container {
   position: relative;
+
   z-index: 2;
 
   max-width: 1100px;
@@ -53,7 +63,7 @@
 
   grid-template-columns: 1fr 1fr;
 
-  gap: 60px;
+  gap: 80px;
 }
 
 
@@ -66,15 +76,25 @@
 
   color: white;
 
-  font-size: 2rem;
+  font-size: 2.2rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+
+  text-shadow:
+    0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+
 .footer-brand p {
-  max-width: 400px;
+  max-width: 430px;
 
   margin: 0;
 
   color: white;
+
+  font-size: 1.05rem;
 
   line-height: 1.7;
 }
@@ -94,12 +114,19 @@
   flex-wrap: wrap;
 }
 
+
 .footer-button {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 130px;
 
   padding: 13px 30px;
 
-  border-radius: 5px;
+  border-radius: 30px;
 
   text-decoration: none;
 
@@ -109,34 +136,19 @@
 
   text-align: center;
 
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    color 0.2s ease;
-}
+  background: white;
 
-
-/* =========================
-   APPLY BUTTON
-========================= */
-
-.apply-button {
-  background: rgba(255, 255, 255, 0.95);
-
-  color: #284623;
-}
-
-
-/* =========================
-   DONATE BUTTON
-========================= */
-
-.donate-button {
-  background: rgba(40, 70, 35, 0.95);
-
-  color: white;
+  color: #3d7134;
 
   border: 2px solid white;
+
+  box-sizing: border-box;
+
+  transition:
+    transform 0.25s ease,
+    background-color 0.25s ease,
+    color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 
@@ -145,7 +157,93 @@
 ========================= */
 
 .footer-button:hover {
-  transform: translateY(-3px);
+  background: #3d7134;
+
+  color: white;
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 6px 15px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================
+   FACEBOOK
+========================= */
+
+.facebook-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 25px;
+
+  color: white;
+
+  font-size: 1rem;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.facebook-link:hover {
+  color: #eaf5e6;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   FACEBOOK ICON
+========================= */
+
+.facebook-icon {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 30px;
+
+  height: 30px;
+
+  border-radius: 50%;
+
+  background: white;
+
+  color: #3d7134;
+
+  font-family: Arial, sans-serif;
+
+  font-size: 1.25rem;
+
+  font-weight: bold;
+
+  line-height: 1;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.facebook-link:hover .facebook-icon {
+  background: #3d7134;
+
+  color: white;
+
+  transform: scale(1.08);
 }
 
 
@@ -158,31 +256,81 @@
 
   flex-direction: column;
 
-  gap: 10px;
+  gap: 12px;
 }
 
+
 .footer-navigation h3 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
 
   color: white;
 
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+
+  font-weight: 700;
 }
 
+
 .footer-navigation a {
+  position: relative;
+
+  width: fit-content;
+
   color: white;
 
   text-decoration: none;
+
+  font-size: 1rem;
 
   transition:
     color 0.2s ease,
     transform 0.2s ease;
 }
 
+
+/* Línea debajo de los links */
+
+.footer-navigation a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: -4px;
+
+  width: 100%;
+
+  height: 2px;
+
+  background: white;
+
+  transform: scaleX(0);
+
+  transform-origin: left;
+
+  transition: transform 0.25s ease;
+}
+
+
+/* Hover */
+
 .footer-navigation a:hover {
-  color: #e8f0e5;
+  color: #f0f7eb;
 
   transform: translateX(4px);
+}
+
+
+.footer-navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* Página activa */
+
+.footer-navigation a.active::after {
+  transform: scaleX(1);
 }
 
 
@@ -201,9 +349,9 @@
 
   padding-top: 20px;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
 
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.95);
 
   font-size: 0.85rem;
 
@@ -221,29 +369,42 @@
     min-height: auto;
   }
 
+
   .footer-overlay {
     min-height: auto;
 
     padding: 50px 20px 25px;
   }
 
+
   .footer-container {
     grid-template-columns: 1fr;
 
-    gap: 40px;
+    gap: 45px;
   }
+
 
   .footer-brand {
     text-align: center;
   }
 
+
   .footer-brand p {
     margin: 0 auto;
   }
 
+
   .footer-buttons {
     justify-content: center;
   }
+
+
+  .facebook-link {
+    justify-content: center;
+
+    margin-top: 25px;
+  }
+
 
   .footer-navigation {
     align-items: center;
@@ -251,9 +412,16 @@
     text-align: center;
   }
 
+
+  .footer-navigation a {
+    width: fit-content;
+  }
+
+
   .footer-bottom {
     margin-top: 40px;
 
     text-align: center;
   }
+
 }

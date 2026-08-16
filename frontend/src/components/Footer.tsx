@@ -22,23 +22,44 @@ const Footer = () => {
               animals, and community.
             </p>
 
+            {/* =========================
+                BUTTONS
+            ========================= */}
+
             <div className="footer-buttons">
 
               <NavLink
                 to="/apply"
-                className="footer-button apply-button"
+                className="footer-button"
               >
                 Apply
               </NavLink>
 
-              <NavLink
-                to="/give-mn"
-                className="footer-button donate-button"
+              <a
+                href="https://veteranvalorfarm.org/checkout/donate?donatePageId=6589f6eabf81a44243793d2f"
+                className="footer-button"
               >
                 Donate
-              </NavLink>
+              </a>
 
             </div>
+
+            {/* =========================
+                FACEBOOK
+            ========================= */}
+
+            <a
+              href="https://www.facebook.com/veteranvalorfarm/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="facebook-link"
+            >
+              <span className="facebook-icon">f</span>
+
+              <span>
+                Follow us on Facebook
+              </span>
+            </a>
 
           </div>
 
@@ -51,13 +72,29 @@ const Footer = () => {
 
             <h3>Explore</h3>
 
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/meet-us">Meet Us</NavLink>
-            <NavLink to="/mission">Mission</NavLink>
-            <NavLink to="/apply">Apply</NavLink>
-            <NavLink to="/give-mn">GiveMN</NavLink>
-            <NavLink to="/contact-us">Contact Us</NavLink>
+            <NavLink to="/">
+              Home
+            </NavLink>
+
+            <NavLink to="/about">
+              About
+            </NavLink>
+
+            <NavLink to="/meet-us">
+              Meet Us
+            </NavLink>
+
+            <NavLink to="/mission">
+              Mission
+            </NavLink>
+
+            <NavLink to="/apply">
+              Apply
+            </NavLink>
+
+            <NavLink to="/contact-us">
+              Contact Us
+            </NavLink>
 
           </div>
 

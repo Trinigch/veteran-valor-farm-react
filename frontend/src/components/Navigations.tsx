@@ -17,13 +17,11 @@ function Navigations() {
        <NavLink to="/mission" className="nav-link">
         Mission
       </NavLink>
-      <NavLink to="/meet-us" className="nav-link">
+      <NavLink to="/MeetUs" className="nav-link">
         Meet Us
       </NavLink>
 
-     
-
-      <NavLink to="/about" className="nav-link">
+      <NavLink to="/About" className="nav-link">
         About VVF
       </NavLink>
   
