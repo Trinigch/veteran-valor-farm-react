@@ -69,8 +69,8 @@ const GiveMN = () => {
           <p>
             For more information about a donation of livestock,
             please contact Matthew Lovitz at{" "}
-            <a href="mailto:Mlovitz@veteranvalorfarm.org">
-              Mlovitz@veteranvalorfarm.org
+            <a href="mailto:Jpeterson@veteranvalorfarm.org">
+             Jpeterson@veteranvalorfarm.org
             </a>
           </p>
 
