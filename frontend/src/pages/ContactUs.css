@@ -309,3 +309,42 @@
   }
 
 }
+
+/* =========================
+   FORM MESSAGES
+========================= */
+
+.success-message,
+.error-message {
+  margin-top: 22px;
+  padding: 14px 18px;
+
+  border-radius: 4px;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* SUCCESS */
+
+.success-message {
+  color: #3f5f32;
+
+  background: #edf3e9;
+
+  border-left: 4px solid #4f6f3a;
+}
+
+
+/* ERROR */
+
+.error-message {
+  color: #8a3f32;
+
+  background: #f8ece9;
+
+  border-left: 4px solid #a65345;
+}

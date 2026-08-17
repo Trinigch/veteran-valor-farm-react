@@ -1,21 +1,69 @@
+import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./ContactUs.css";
 import contactImage from "../assets/Imagenes/ContactUs.png";
 
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+
 const ContactUs = () => {
+  const [isSending, setIsSending] = useState(false);
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+
+    setIsSending(true);
+    setStatus("idle");
+
+    try {
+      const response = await emailjs.sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        form,
+        PUBLIC_KEY
+      );
+
+      console.log("EmailJS response:", response);
+
+      if (response.status === 200) {
+        // El email fue enviado correctamente
+        setStatus("success");
+
+        // Limpiar todos los campos del formulario
+        form.reset();
+      } else {
+        setStatus("error");
+      }
+
+    } catch (error) {
+      console.error("EmailJS error:", error);
+
+      setStatus("error");
+
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <main className="contact-page">
 
       <section className="contact-section">
 
-        {/* =========================
-            CONTACT FORM
-        ========================= */}
+        {/* CONTACT FORM */}
 
         <div className="contact-form-container">
 
           <h1>Contact Us</h1>
 
-          <form className="contact-form">
+          <form
+            className="contact-form"
+            onSubmit={handleSubmit}
+          >
 
             {/* NAME */}
 
@@ -41,7 +89,6 @@ const ContactUs = () => {
 
                 </div>
 
-
                 <div className="form-field">
 
                   <label htmlFor="lastName">
@@ -62,7 +109,6 @@ const ContactUs = () => {
 
             </fieldset>
 
-
             {/* EMAIL */}
 
             <div className="form-field">
@@ -81,7 +127,6 @@ const ContactUs = () => {
 
             </div>
 
-
             {/* NEWSLETTER */}
 
             <div className="checkbox-field">
@@ -90,6 +135,7 @@ const ContactUs = () => {
                 type="checkbox"
                 id="newsletter"
                 name="newsletter"
+                value="Yes"
               />
 
               <label htmlFor="newsletter">
@@ -97,7 +143,6 @@ const ContactUs = () => {
               </label>
 
             </div>
-
 
             {/* SUBJECT */}
 
@@ -117,7 +162,6 @@ const ContactUs = () => {
 
             </div>
 
-
             {/* MESSAGE */}
 
             <div className="form-field">
@@ -136,24 +180,37 @@ const ContactUs = () => {
 
             </div>
 
-
             {/* SUBMIT */}
 
             <button
               type="submit"
               className="contact-submit"
+              disabled={isSending}
             >
-              Send Message
+              {isSending ? "Sending..." : "Send Message"}
             </button>
+
+            {/* SUCCESS */}
+
+            {status === "success" && (
+              <p className="success-message">
+                Your message has been sent successfully!
+              </p>
+            )}
+
+            {/* ERROR */}
+
+            {status === "error" && (
+              <p className="error-message">
+                There was a problem sending your message. Please try again.
+              </p>
+            )}
 
           </form>
 
         </div>
 
-
-        {/* =========================
-            IMAGE
-        ========================= */}
+        {/* IMAGE */}
 
         <div className="contact-image-container">
 

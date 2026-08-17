@@ -12,7 +12,7 @@ function Navigations() {
       </NavLink>
 
       <NavLink to="/give-mn" className="nav-link">
-        GiveMN
+        DONATE
       </NavLink>
        <NavLink to="/mission" className="nav-link">
         Mission
