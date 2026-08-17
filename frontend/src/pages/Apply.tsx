@@ -4,6 +4,7 @@ import helpingVetsImage from "../assets/Imagenes/helpingvets.png";
 
 const Apply = () => {
   return (
+    
     <main className="apply-page">
 
       {/* =========================
